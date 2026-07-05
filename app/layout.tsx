@@ -8,6 +8,7 @@ import { SmoothScrollProvider } from "@/components/providers/smooth-scroll-provi
 import { SpotlightProvider } from "@/components/providers/spotlight-provider";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -134,6 +135,7 @@ export default function RootLayout({
             </SpotlightProvider>
           </SmoothScrollProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );

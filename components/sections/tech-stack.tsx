@@ -25,7 +25,9 @@ function TechCard({ tech }: { tech: TechItem }) {
         className={hovered ? undefined : "text-muted-foreground grayscale"}
       >
         {entry ? (
-          <entry.Icon className="size-9" aria-label={`${tech.name} icon`} role="img" />
+          <span aria-label={`${tech.name} icon`} role="img">
+            <entry.Icon className="size-9" />
+          </span>
         ) : (
           <span className="flex size-9 items-center justify-center rounded-full bg-accent/10 text-sm font-bold text-accent">
             {tech.name.charAt(0)}
